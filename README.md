@@ -1,14 +1,14 @@
 # Miniature World Sawmill Exhibit
 ## About
-This repo is a collection of files for configuration and installation of the [PiMediaSync](https://github.com/limbicmedia/PiMediaSync) application to run the **Sawmill Exhibit** at [Miniature World](https://miniatureworld.com/), BC, Canada.
+This repo is a collection of files for configuration and installation of the [PiMediaSync](https://github.com/limbicmedia/PiMediaSync) application to run the Sawmill Exhibit at [Miniature World](https://miniatureworld.com/) in Victoria, BC, Canada.
 
 ## Installation
-The installation procedure for this project has been made as simple as possible. On a fresh installation of Raspbian, run:
+The installation procedure for this project has been made as simple as possible. On a fresh installation of Raspberry Pi OS, run:
 
-```BASH
-sudo su
-export SAWMILL_VERSION=v2.0.1 # the version you wish to install, must be 2.0.0 or greater 
-wget -O - https://raw.githubusercontent.com/limbicmedia/mini-world-sawmill-display/${SAWMILL_VERSION}/setup.sh | bash
+```bash
+export SAWMILL_VERSION=v2.1.1  # the version you wish to install
+export GITHUB_HOST=limbicmedia # the github account hosting the project's current code
+wget -O - https://raw.githubusercontent.com/${GITHUB_HOST}/mini-world-sawmill-display/${SAWMILL_VERSION}/setup.sh | sudo bash
 ```
 
 Steps for setting up Raspbian can be found [here](https://github.com/limbicmedia/PiMediaSync).
@@ -41,10 +41,11 @@ This is the video file played for this exhibit.
 ## Interaction
 The exhibit is activated by a button on the front of the display.
 
-The code check for a FALLING edge on `GPIO15` (pin 10 of RPI) to activate the installation.
+The code checks for a falling edge on `GPIO15` (pin 10 of RPI) to activate the installation.
 
 ### Button Wiring
 The diagram below shows the circuit wiring for the button.
+
 A `1K` resistor acts as a pull up. The small resistance is to accommodate the long wire leads running to the button. The 1µF capacitor helps reduce noise in the system.
 
 <br>
