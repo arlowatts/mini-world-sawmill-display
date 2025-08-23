@@ -6,9 +6,10 @@ This repo is a collection of files for configuration and installation of the [Pi
 The installation procedure for this project has been made as simple as possible. On a fresh installation of Raspberry Pi OS, run:
 
 ```bash
+sudo su
 export SAWMILL_VERSION=v2.1.2  # the version you wish to install
 export GITHUB_HOST=limbicmedia # the github account hosting the project's current code
-wget -O - https://raw.githubusercontent.com/${GITHUB_HOST}/mini-world-sawmill-display/${SAWMILL_VERSION}/setup.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/${GITHUB_HOST}/mini-world-sawmill-display/${SAWMILL_VERSION}/setup.sh | bash
 ```
 
 Steps for setting up Raspbian can be found [here](https://github.com/limbicmedia/PiMediaSync).
