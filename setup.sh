@@ -17,6 +17,7 @@ fi
 HOMEDIR=${HOMEDIR:-/root}
 WORKDIR=${HOMEDIR}/sawmill
 SAWMILL_VERSION=${SAWMILL_VERSION:-v2.1.2}
+GITHUB_HOST=${GITHUB_HOST:-limbicmedia}
 
 rm -rf ${WORKDIR}
 mkdir -p ${WORKDIR}/video
